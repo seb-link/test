@@ -2,7 +2,7 @@ from selenium import webdriver
 from myby import by
 from selenium.webdriver.edge.options import Options
 
-class DiscordAPI:
+class DiscordUserAPI:
     
     def __init__(self, headless: bool = True) -> None:
         
