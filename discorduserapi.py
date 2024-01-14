@@ -14,6 +14,6 @@ class DiscordUserAPI:
 
         self.driver = webdriver.Edge(options=options)
 
-    def login(self, userame: str, password: str):
+    def login(self, mail: str, password: str):
         self.driver.get("https://discord.com/login")
         
