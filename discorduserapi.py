@@ -56,3 +56,12 @@ class DiscordUserAPI:
 
         self.driver.get("https://discord.com/channels/@me")
     
+    def send_channel(self, id_serv: str, id_channel: str, msg_to_send: str):
+        self.driver.get(f"https://discord.com/channels/{id_serv}/{id_channel}")
+
+        self.wait.until(EC.visibility_of_element_located((by.css_selector, '.markup_a7e664.editor__66464.slateTextArea__0661c.fontSize16Padding__48818')))
+        msg_input = self.driver.find_element(by.css_selector, '.markup_a7e664.editor__66464.slateTextArea__0661c.fontSize16Padding__48818')
+        msg_input.send_keys(msg_to_send)
+        msg_input.send_keys(Keys.ENTER)
+
+        self.driver.get("https://discord.com/channels/@me")
