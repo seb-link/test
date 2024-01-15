@@ -73,10 +73,15 @@ class DiscordUserAPI:
     def get_friends_online(self):
         friends = []
 
-        names = self.driver.find_elements(by.class_name, 'username__81ee6')
+        time.sleep(2)
 
-        for name in names:
-            friends.append(name.text)
+        divs = self.driver.find_elements(by.class_name, 'listItemContents__7c940')
+
+        for div in divs:
+            names = div.find_elements(by.class_name, 'username__81ee6')
+
+            for name in names:
+                friends.append(name.text)
         
         # retourner la liste
         return friends
