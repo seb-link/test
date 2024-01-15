@@ -28,10 +28,12 @@ class DiscordUserAPI:
         password_input = self.driver.find_element(by.id, 'uid_7')
         validate_button = self.driver.find_element(by.xpath, '//*[@id="app-mount"]/div[2]/div[1]/div[1]/div/div/div/div/form/div[2]/div/div[1]/div[2]/button[2]')
 
+        # 
         username_input.send_keys(mail)
         password_input.send_keys(password)
         validate_button.click()
 
+        # attend la fin du chargement de la page (je crois)
         while not "app" in self.driver.current_url:
             pass
 
@@ -69,5 +71,13 @@ class DiscordUserAPI:
 
 
     def get_friends_online(self):
-        pass
-        exit(0)
+        friends = []
+
+        names = self.driver.find_elements(by.class_name, 'username__81ee6')
+
+        for name in names:
+            friends.append(name.text)
+        
+        # retourner la liste
+        return friends
+    
