@@ -55,7 +55,7 @@ class DiscordUserAPI:
         msg_input.send_keys(Keys.ENTER)
 
         self.driver.get("https://discord.com/channels/@me")
-        
+
     
     def send_channel(self, id_serv: str, id_channel: str, msg_to_send: str):
         self.driver.get(f"https://discord.com/channels/{id_serv}/{id_channel}")
@@ -66,3 +66,7 @@ class DiscordUserAPI:
         msg_input.send_keys(Keys.ENTER)
 
         self.driver.get("https://discord.com/channels/@me")
+
+
+    def get_friends_online(self):
+        pass
