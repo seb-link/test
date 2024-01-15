@@ -49,8 +49,8 @@ class DiscordUserAPI:
                 a.click()
                 break
         
-        self.wait.until(EC.visibility_of_element_located((by.xpath, '//*[@id="app-mount"]/div[2]/div[1]/div[1]/div/div[2]/div/div/div/div/div[2]/div[2]/div/div[1]/main/form/div/div/div/div[3]/div/div[2]')))
-        msg_input = self.driver.find_element(by.xpath, '//*[@id="app-mount"]/div[2]/div[1]/div[1]/div/div[2]/div/div/div/div/div[2]/div[2]/div/div[1]/main/form/div/div/div/div[3]/div/div[2]')
+        self.wait.until(EC.visibility_of_element_located((by.css_selector, '.markup_a7e664.editor__66464.slateTextArea__0661c.fontSize16Padding__48818')))
+        msg_input = self.driver.find_element(by.css_selector, '.markup_a7e664.editor__66464.slateTextArea__0661c.fontSize16Padding__48818')
         msg_input.send_keys(msg_to_send)
         msg_input.send_keys(Keys.ENTER)
 
