@@ -31,6 +31,9 @@ class DiscordUserAPI:
         password_input.send_keys(password)
         validate_button.click()
 
+        while not "app" in self.driver.current_url:
+            pass
+
     def send_dm(self, id_recv: str, msg_to_send: str):
         self.driver.get(f"https://discord.com/channels/@me/{id_recv}")
         self.wait.until(EC.visibility_of_element_located((by.xpath, '//*[@id="app-mount"]/div[2]/div[1]/div[1]/div/div[2]/div/div/div/div/div[2]/div[2]/div/div[1]/main/form/div/div/div/div[3]/div/div[2]')))
