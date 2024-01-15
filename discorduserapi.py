@@ -73,7 +73,7 @@ class DiscordUserAPI:
     def get_friends_online(self):
         friends = []
 
-        time.sleep(2)
+        self.wait.until(EC.visibility_of_element_located((by.class_name, 'listItemContents__7c940')))
 
         divs = self.driver.find_elements(by.class_name, 'listItemContents__7c940')
 
