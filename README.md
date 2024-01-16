@@ -5,7 +5,7 @@ DiscordUserApi est un programme qui permet d'envoyer des messages automatiquemen
 Si vous avez des idées ou des suggestions, voire des problèmes, je vous laisse aller voir la page [issues](https://github.com/codeuriii/DiscordUserAPI/issues).
 
 ---
-# Version Selenium:
+## Version Selenium:
 
 ### Initialisation et exemple:
 ```py
