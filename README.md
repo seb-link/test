@@ -1,4 +1,4 @@
-﻿# DiscordUserAPI
+# DiscordUserAPI
 
 # FR
 DiscordUserApi est un programme qui permet d'envoyer des messages automatiquement, sans utiliser le compte d'un bot, mais bien son compte utilisateur.
@@ -29,7 +29,7 @@ dua.get_friends_online()  # ["friend 1", "friend 2", ...]
 
 
 ---
-# Version Requests:
+## Version Requests:
 
 ### Initialisation et exemple:
 
@@ -45,5 +45,5 @@ dua.send_msg('channel id', 'msg content')  # 200 (requests status code)
 > DUA peut envoyer un message avec .send_msg() ou le premier argument est l'identifiant du salon et le deuxième est le message en question.
 
 **Attention, l'oauth se reset a chaque reconenction !**
-
-#EN
+# EN
+Version anglaise
