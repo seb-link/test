@@ -17,7 +17,7 @@ class DiscordUserAPI:
         else:
             options.add_argument("start-maximized")
 
-        self.driver = webdriver.Edge(options=options)# pk pas chrome ????????????? #edgeonfire #chromeontop
+        self.driver = webdriver.Edge(options=options)
         self.wait = WebDriverWait(self.driver, 10)
 
     def login(self, mail: str, password: str):
